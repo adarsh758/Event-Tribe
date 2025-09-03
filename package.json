@@ -1,0 +1,26 @@
+{
+  "name": "event-tribe",
+  "version": "1.0.0",
+  "description": "EventTribe is a modern **event discovery web application** built with **HTML, CSS, and JavaScript**.\r It allows users to explore, search, and filter upcoming events while providing organizers a platform to showcase their events.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "--watch "
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adarsh758/Event-Tribe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adarsh758/Event-Tribe/issues"
+  },
+  "homepage": "https://adarsh758.github.io/Event-Tribe/",
+  "devDependencies": {
+    "sass": "^1.92.0"
+  }
+}
