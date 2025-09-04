@@ -1,0 +1,53 @@
+.event-cards-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.preview-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  animation: floatCard 6s ease-in-out infinite;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--primary-color);
+  }
+
+  h4 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+  &:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+  &:nth-child(3) {
+    animation-delay: 3s;
+  }
+  &:nth-child(4) {
+    animation-delay: 4.5s;
+  }
+}
+
+.card-tag {
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}

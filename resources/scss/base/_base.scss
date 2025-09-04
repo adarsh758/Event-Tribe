@@ -1,0 +1,23 @@
+body {
+  font-family: var(--font-primary);
+  background: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
