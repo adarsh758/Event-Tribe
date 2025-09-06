@@ -1,42 +1,41 @@
-import eventsData from "./vendor/event-data.js";
-import { renderEvents, showEventDetails } from "./components/render-events.js";
-import { initializeHoverEffects, scrollToEvents, showCreateEvent } from "./components/interactions.js";
-import searchEvents from "./components/search-events.js";
-import filterByCategory from "./components/filter-events.js";
-import initializeHeader from "./components/header.js";
+// Imports
+import eventsData from './vendor/event-data.js';
+import initializeHeader from './components/header.js';
+import filterByCategory from './components/filter-events.js';
+import { applyHoverEffect, scrollToEvents, showCreateEvent } from './components/interactions.js';
+import searchEvents from './components/search-events.js';
+import renderEvents from './components/render-events.js';
 
-let currentEvents = [...eventsData];
+// DOM Elements
+const filterTagElements = document.querySelectorAll('.filter-tags');
+const exploreEventBtnElement = document.getElementById('explore-event-btn');
+const createEventBtnElement = document.getElementById('create-event-btn');
+const searchFormElement = document.querySelector('.search-form');
 
-// Initialize the app
-document.addEventListener("DOMContentLoaded", function () {
-  initializeHeader();
-});
+// Copy of all events
+const currentEvents = [...eventsData];
 
-document.addEventListener("DOMContentLoaded", function () {
-  renderEvents(currentEvents);
-});
-
-const FILTER_TAGS_ELEMENT = document.querySelectorAll(".filter-tags");
-
-FILTER_TAGS_ELEMENT.forEach((element) => {
-  element.addEventListener("click", () => {
-    filterByCategory('all');
+/**
+ * Attach click event listeners to filter tags 
+ */
+const initializeFilterTags = () => {
+  filterTagElements.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      const { category } = event.target.dataset;
+      filterByCategory(category, event.target);
+    });
   });
-});
+};
 
-document.querySelector('.hero-buttons .btn-primary').addEventListener("click", scrollToEvents);
+// Initialize app
+const initializeApp = () => {
+  document.addEventListener('scroll', initializeHeader);
+  renderEvents(currentEvents);
+  initializeFilterTags();
+  document.addEventListener('mousemove', applyHoverEffect);
+  exploreEventBtnElement.addEventListener('click', scrollToEvents);
+  createEventBtnElement.addEventListener('click', showCreateEvent);
+  searchFormElement.addEventListener('submit', searchEvents);
+};
 
-document.querySelector('.hero-buttons .btn-secondary').addEventListener("click", showCreateEvent);
-
-document.querySelector('.search-form').addEventListener('submit', searchEvents);
-
-
-
-
-document.addEventListener('DOMContentLoaded', ()=> {
-    document.querySelector('.event-card').addEventListener('click', (event)=> {
-        showEventDetails(event.id);
-    })
-})
-
-initializeHoverEffects();
+document.addEventListener('DOMContentLoaded', initializeApp);

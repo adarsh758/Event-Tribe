@@ -1,24 +1,54 @@
-import { showLoading, hideLoading } from "./loading.js";
+import eventsData from '../vendor/event-data.js';
+import { showLoading, hideLoading } from './loading.js';
+import renderEvents from './render-events.js';
 
-// Filter by category
-function filterByCategory(category) {
-  // Update active filter tag
-  document.querySelectorAll(".filter-tag").forEach((tag) => {
-    tag.classList.remove("active");
+/**
+ * Update active class on filter tags
+ * @param {HTMLElement} target - The clicked filter tag element
+ */
+const updateActiveFilterTag = (target) => {
+  const filterTagElements = document.querySelectorAll('.filter-tag');
+  filterTagElements.forEach((tag) => {
+    tag.classList.remove('active');
   });
-  event.target.classList.add("active");
+  target.classList.add('active');
+};
 
-  showLoading();
+/**
+ * Get filtered events by category
+ * @param {string} category - The category to filter by (e.g. "all", "sports", "music")
+ * @returns {Array<Object>} - A list of filtered event objects
+ */
+const getFilteredEvents = (category) => {
+  let currentEvents = [];
 
+  if (category === 'all') {
+    currentEvents = [...eventsData];
+    return currentEvents;
+  }
+
+  currentEvents = eventsData.filter((event) => event.category === category);
+  return currentEvents;
+};
+
+// Render Filterd Events after delay (current delay = 0.5sec)
+const renderFilteredEvents = (category) => {
   setTimeout(() => {
-    if (category === "all") {
-      currentEvents = [...eventsData];
-    } else {
-      currentEvents = eventsData.filter((event) => event.category === category);
-    }
+    const currentEvents = getFilteredEvents(category);
     renderEvents(currentEvents);
     hideLoading();
   }, 500);
-}
+};
+
+/**
+ * Filter events by category
+ * @param {string} category - The category name
+ * @param {HTMLElement} target - The clicked filter tag element
+ */
+const filterByCategory = (category, target) => {
+  updateActiveFilterTag(target);
+  showLoading();
+  renderFilteredEvents(category);
+};
 
 export default filterByCategory;

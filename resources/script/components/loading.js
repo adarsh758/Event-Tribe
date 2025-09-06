@@ -1,14 +1,20 @@
+const lodingElement = document.getElementById('loading');
+const eventGridElement = document.getElementById('events-grid');
 
-// Show loading
+/**
+ * Show the loading indicator and reduce the event grid opacity.
+ */
 function showLoading() {
-  document.getElementById("loading").style.display = "block";
-  document.getElementById("eventsGrid").style.opacity = "0.3";
+  lodingElement.style.display = 'block';
+  eventGridElement.style.opacity = '0.3';
 }
 
-// Hide loading
+/**
+ * Hide the loading indicator and restore the event grid opacity.
+ */
 function hideLoading() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("eventsGrid").style.opacity = "1";
+  lodingElement.style.display = 'none';
+  eventGridElement.style.opacity = '1';
 }
 
-export {showLoading, hideLoading}
+export { showLoading, hideLoading };
