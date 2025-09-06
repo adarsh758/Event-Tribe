@@ -4,9 +4,12 @@
   "description": "EventTribe is a modern **event discovery web application** built with **HTML, CSS, and JavaScript**.\r It allows users to explore, search, and filter upcoming events while providing organizers a platform to showcase their events.",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "sass --watch resources/scss/main.scss:resources/css/main.css"
-    
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "scss": "sass --watch resources/scss/main.scss:resources/css/main.css",
+    "check": "npm run format && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,11 @@
   },
   "homepage": "https://adarsh758.github.io/Event-Tribe/",
   "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.6.2",
     "sass": "^1.92.0"
   }
 }
