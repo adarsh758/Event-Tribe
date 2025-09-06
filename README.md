@@ -7,30 +7,74 @@ It allows users to explore, search, and filter upcoming events while providing o
 
 ## 🚀 Features
 
-* 🎟️ Browse and discover upcoming events
-* 🔍 Search by keyword and location
-* 🏷️ Filter events by category (Music, Tech, Art, Food, Sports)
-* ✨ Interactive hero section with animated preview cards
-* 📱 Responsive and modern UI with glassmorphism styling
-* ⚡ Smooth animations and hover effects
+- 🎟️ Browse and discover upcoming events
+- 🔍 Search by keyword and location
+- 🏷️ Filter events by category (Music, Tech, Art, Food, Sports)
+- ✨ Interactive hero section with animated preview cards
+- 📱 Responsive and modern UI with glassmorphism styling
+- ⚡ Smooth animations and hover effects
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **HTML5** – Semantic markup for structure
-* **CSS3** – Modern styles with gradients, glass effects, and responsive design
-* **JavaScript (ES6)** – Dynamic rendering, search, and filtering logic
-
+- **HTML5** – Semantic markup for structure
+- **SCSS** – Modern styles with gradients, glass effects, and responsive design
+- **JavaScript (ES6)** – Dynamic rendering, search, and filtering logic
+- **GIT** - Version Corntrol
+- **ESLint & Prettier** – Code quality and consistent formatting
 ---
 
 ## 📂 Project Structure
 
 ```
-EventTribe/
-├── index.html      # Main entry point
-├── style.css       # Stylesheet with dark theme & glassmorphism
-└── script.js       # Event rendering & interactivity
+.
+└── Event-Tribe/
+    ├── .eslintrc.json
+    ├── .gitignore
+    ├── .prettierrc
+    ├── .prettierignore
+    ├── index.html
+    ├── LICENSE
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    └── resources/
+        ├── css/
+        │   ├── main.css
+        │   └── main.css.map
+        ├── script/
+        │   ├── app.js
+        │   ├── components/
+        │   │   ├── filter-events.js
+        │   │   ├── header.js
+        │   │   ├── interactions.js
+        │   │   ├── loading.js
+        │   │   ├── render-events.js
+        │   │   ├── search-events.js
+        │   │   └── show-event-details.js
+        │   └── vendor/
+        │       └── event-data.js
+        └── scss/
+            ├── main.scss
+            ├── abstracts/
+            │   └── _variables.scss
+            ├── base/
+            │   ├── _animations.scss
+            │   ├── _base.scss
+            │   ├── _reset.scss
+            │   └── _typography.scss
+            ├── components/
+            │   ├── _buttons.scss
+            │   ├── _cards.scss
+            │   └── _spinners.scss
+            └── layout/
+                ├── _events.scss
+                ├── _footer.scss
+                ├── _header.scss
+                ├── _hero.scss
+                ├── _navigation.scss
+                └── _search.scss
 ```
 
 ---
@@ -46,6 +90,7 @@ EventTribe/
 
 2. Open `index.html` in your browser.
    No build process required (vanilla HTML, CSS, JS).
+
 ---
 
 ## 📜 License
