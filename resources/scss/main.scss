@@ -1,28 +1,27 @@
 /// Reset
-@import "base/reset";
+@use 'base/reset';
 
 // Variables
-@import "abstracts/variables";
+@use 'abstracts/variables';
 
 // Typography
-@import "base/typography";
+@use 'base/typography';
 
 // Base/Global
-@import "base/base";
+@use 'base/base';
 
 // Animation
-@import "base/animations";
+@use 'base/animations';
 
 // Components
-@import "components/buttons";
-@import "components/cards";
-@import "components/spinners";
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/spinners';
 
 // Layout
-@import "layout/navigation";
-@import "layout/header";
-@import "layout/hero";
-@import "layout/search";
-@import "layout/events";
-@import "layout/footer";
-
+@use 'layout/navigation';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/search';
+@use 'layout/events';
+@use 'layout/footer';
