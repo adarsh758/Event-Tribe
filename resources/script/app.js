@@ -7,16 +7,16 @@ import searchEvents from './components/search-events.js';
 import renderEvents from './components/render-events.js';
 
 // DOM Elements
-const filterTagElements = document.querySelectorAll('.filter-tags');
+const filterTagElements = document.querySelectorAll('.tag-filter');
 const exploreEventBtnElement = document.getElementById('explore-event-btn');
 const createEventBtnElement = document.getElementById('create-event-btn');
-const searchFormElement = document.querySelector('.search-form');
+const searchFormElement = document.querySelector('.search__form');
 
 // Copy of all events
 const currentEvents = [...eventsData];
 
 /**
- * Attach click event listeners to filter tags 
+ * Attach click event listeners to filter tags
  */
 const initializeFilterTags = () => {
   filterTagElements.forEach((element) => {

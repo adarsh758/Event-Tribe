@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.hero-content {
+.hero__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -18,7 +18,7 @@
   }
 }
 
-.hero-text h1 {
+.hero__text h1 {
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, rgb(255, 255, 255) 0%, var(--secondary-color) 100%);
   -webkit-background-clip: text;
@@ -30,14 +30,14 @@
   }
 }
 
-.hero-text p {
+.hero__text p {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-.hero-buttons {
+.hero__buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -47,6 +47,6 @@
   }
 }
 
-.hero-visual {
+.hero__visual {
   position: relative;
 }

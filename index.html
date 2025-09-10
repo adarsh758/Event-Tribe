@@ -18,34 +18,37 @@
   <body>
     <div class="animated-bg" aria-hidden="true"></div>
 
+    <!-- Header -->
     <header class="header">
-      <nav class="nav container">
-        <div class="logo">EventTribe</div>
-        <ul class="nav-links">
+      <nav class="header__nav container">
+        <div class="header__logo">EventTribe</div>
+        <ul class="header__nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#contact">Categories</a></li>
           <li><a href="#about">About</a></li>
         </ul>
-        <a href="#" class="nav-cta">Join Now</a>
+        <a href="#" class="header__nav-cta">Join Now</a>
       </nav>
     </header>
 
     <main>
+      <!-- Hero Image -->
       <section id="home" class="hero">
         <div class="container">
-          <div class="hero-content">
-            <div class="hero-text">
+          <div class="hero__content">
+            <div class="hero__text">
               <h1>Discover Amazing Events Near You</h1>
               <p>
-                Connect with your community through unforgettable experiences. From concerts to workshops, find events that match your interests and create lasting memories.
+                Connect with your community through unforgettable experiences. From concerts to
+                workshops, find events that match your interests and create lasting memories.
               </p>
-              <div class="hero-buttons">
+              <div class="hero__buttons">
                 <button id="explore-event-btn" class="btn-primary">Explore Events ✨</button>
                 <button id="create-event-btn" class="btn-secondary">Create Event 🎯</button>
               </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero__visual">
               <div class="event-cards-preview">
                 <div class="preview-card">
                   <h2>Music Festival</h2>
@@ -73,18 +76,22 @@
         </div>
       </section>
 
-      <section class="search-section">
+      <!-- Search, Filter and Tags -->
+      <section class="search">
         <div class="container">
-          <div class="search-container">
+          <div class="search__container">
             <h2>Find Your Perfect Event</h2>
-            <form class="search-form">
+            <form class="search__form">
+              <!-- Search Form -->
               <input
                 type="text"
-                class="search-input"
+                class="search__input"
                 placeholder="Search events..."
                 id="searchInput"
               />
-              <select class="search-select" id="locationSelect" aria-label="Select a location">
+
+              <!-- Location Filter -->
+              <select class="search__select" id="locationSelect" aria-label="Select a location">
                 <option value="">All Locations</option>
                 <option value="delhi">Delhi</option>
                 <option value="mumbai">Mumbai</option>
@@ -92,33 +99,38 @@
                 <option value="hyderabad">Hyderabad</option>
                 <option value="chennai">Chennai</option>
               </select>
-              <button type="submit" class="search-btn">Search 🔍</button>
+              <button type="submit" class="search__button">Search 🔍</button>
             </form>
-            <div class="filter-tags">
-              <div class="filter-tag active" data-category="all">All</div>
-              <div class="filter-tag" data-category="music">Music</div>
-              <div class="filter-tag" data-category="tech">Tech</div>
-              <div class="filter-tag" data-category="art">Art</div>
-              <div class="filter-tag" data-category="food">Food</div>
-              <div class="filter-tag" data-category="sports">Sports</div>
+
+            <!-- Event Tags -->
+            <div class="tag-filter">
+              <div class="tag-filter__item tag-filter__item--active" data-category="all">All</div>
+              <div class="tag-filter__item" data-category="music">Music</div>
+              <div class="tag-filter__item" data-category="tech">Tech</div>
+              <div class="tag-filter__item" data-category="art">Art</div>
+              <div class="tag-filter__item" data-category="food">Food</div>
+              <div class="tag-filter__item" data-category="sports">Sports</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="events" class="events-section">
+      <!-- Events -->
+      <section id="events" class="events">
         <div class="container">
-          <div class="events-header">
+          <div class="events__header">
             <h2>Upcoming Events</h2>
             <p>Discover what's happening in your city</p>
           </div>
 
+          <!-- Loading Animaion -->
           <div class="loading" id="loading">
             <div class="spinner"></div>
             <p>Finding amazing events for you...</p>
           </div>
 
-          <div class="events-grid" id="events-grid">
+          <!-- Event Cards -->
+          <div class="events__grid" id="events-grid">
             <!-- Events will be populated by JavaScript -->
           </div>
         </div>

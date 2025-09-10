@@ -1,19 +1,19 @@
-.events-section {
+.events {
   padding: 5rem 0;
 }
 
-.events-header {
+.events__header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.events-header h2 {
+.events__header h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--text-light);
 }
 
-.events-grid {
+.events__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;

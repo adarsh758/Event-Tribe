@@ -1,17 +1,17 @@
-.search-section {
+.search {
   padding: 4rem 0;
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   border-top: 1px solid var(--border-color);
 }
 
-.search-container {
+.search__container {
   max-width: 50.5em;
   margin: 0 auto;
   text-align: center;
 }
 
-.search-container h2 {
+.search__container h2 {
   margin-bottom: 2rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -19,7 +19,7 @@
   background-clip: text;
 }
 
-.search-form {
+.search__form {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -30,8 +30,8 @@
   }
 }
 
-.search-input,
-.search-select {
+.search__input,
+.search__select {
   flex: 1;
   min-width: 12.5em;
   padding: 1rem;
@@ -49,7 +49,7 @@
   }
 }
 
-.search-btn {
+.search__button {
   background: var(--gradient-primary);
   border: none;
   padding: 1rem 2rem;
@@ -65,7 +65,7 @@
   }
 }
 
-.filter-tags {
+.tag-filter {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -76,7 +76,7 @@
   }
 }
 
-.filter-tag {
+.tag-filter__item {
   background: var(--card-bg);
   border: 2px solid var(--border-color);
   padding: 0.5rem 1rem;
@@ -85,7 +85,7 @@
   transition: all 0.3s ease;
   color: var(--text-light);
 
-  &.active,
+  &--active,
   &:hover {
     border-color: var(--primary-color);
     background: var(--glass-bg);

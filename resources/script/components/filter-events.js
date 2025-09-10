@@ -7,11 +7,11 @@ import renderEvents from './render-events.js';
  * @param {HTMLElement} target - The clicked filter tag element
  */
 const updateActiveFilterTag = (target) => {
-  const filterTagElements = document.querySelectorAll('.filter-tag');
+  const filterTagElements = document.querySelectorAll('.tag-filter__item');
   filterTagElements.forEach((tag) => {
-    tag.classList.remove('active');
+    tag.classList.remove('tag-filter__item--active');
   });
-  target.classList.add('active');
+  target.classList.add('tag-filter__item--active');
 };
 
 /**

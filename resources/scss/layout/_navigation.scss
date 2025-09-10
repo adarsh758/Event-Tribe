@@ -1,11 +1,11 @@
-.nav {
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
 }
 
-.logo {
+.header__logo {
   font-size: 2rem;
   font-weight: 800;
   background: var(--gradient-primary);
@@ -14,7 +14,7 @@
   background-clip: text;
 }
 
-.nav-links {
+.header__nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
@@ -47,7 +47,7 @@
   }
 }
 
-.nav-cta {
+.header__nav-cta {
   background: var(--gradient-primary);
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
