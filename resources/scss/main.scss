@@ -1,24 +1,24 @@
-/// Reset
+/* Reset */
 @use 'base/reset';
 
-// Variables
+/* Variables */
 @use 'abstracts/variables';
 
-// Typography
+/* Typography */
 @use 'base/typography';
 
-// Base/Global
+/* Base/Global */
 @use 'base/base';
 
-// Animation
+/* Animation */
 @use 'base/animations';
 
-// Components
+/* Components */
 @use 'components/buttons';
 @use 'components/cards';
 @use 'components/spinners';
 
-// Layout
+/* Layout */
 @use 'layout/navigation';
 @use 'layout/header';
 @use 'layout/hero';

@@ -15,12 +15,12 @@
 }
 
 .header__nav-links {
-  display: flex;
+  display: none;
   list-style: none;
   gap: 2rem;
 
-  @media (max-width: 768px) {
-    display: none;
+  @media (min-width: 768px) {
+    display: flex;
   }
 
   a {
