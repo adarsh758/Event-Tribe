@@ -1,4 +1,6 @@
 .header {
+  display: flex;
+  align-items: center;
   backdrop-filter: blur(20px);
   background: var(--glass-bg);
   border-bottom: 1px solid var(--border-color);
@@ -8,4 +10,21 @@
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+
+  svg {
+    width: 3rem;
+    height: 2.5rem;
+    transform: translateY(0.16rem); /* For Centering the SVG */
+  }
+  span {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
 }

@@ -20,16 +20,31 @@
 
     <!-- Header -->
     <header class="header">
+      <div class="header__logo">
+        <a href="/">
+          <svg width="45" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #a044ff; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #e83283; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="25" r="15" fill="url(#logoGradient4)" />
+            <circle cx="25" cy="65" r="15" fill="url(#logoGradient4)" opacity="0.8" />
+            <circle cx="75" cy="65" r="15" fill="url(#logoGradient4)" opacity="0.8" />
+          </svg>
+          <span>EventTribe</span>
+        </a>
+      </div>
       <nav class="header__nav container">
-        <div class="header__logo">EventTribe</div>
         <ul class="header__nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#contact">Categories</a></li>
           <li><a href="#about">About</a></li>
         </ul>
-        <a href="#" class="header__nav-cta">Join Now</a>
       </nav>
+      <a href="#" class="header__nav-cta">Join Now</a>
     </header>
 
     <main>
