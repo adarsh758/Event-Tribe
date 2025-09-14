@@ -22,7 +22,7 @@ function updateNavigationVisibility(element, isVisible) {
 
 /**
  * Toggles the navigation menu's visibility state and updates related attributes.
- * 
+ *
  * Enables or disables page scroll by modifying `body`'s `overflow-y` style
  */
 const toggleNavigation = () => {
@@ -40,4 +40,21 @@ const toggleNavigation = () => {
   }
 };
 
-export default toggleNavigation;
+/**
+ * Handles clicks outside the navigation menu and closes it if open.
+ * @param {MouseEvent} event - The click event
+ */
+function outsideClickHandler(event) {
+  const navElement = document.querySelector('.header__nav');
+  const isMenuBtn = event.target.closest('.header__menu-btn');
+  const isInsideNav = event.target.closest('.header__nav');
+
+  if (isMenuBtn || isInsideNav) return;
+
+  const isVisible = navElement.getAttribute('data-nav-visibility') === 'true';
+  if (isVisible) {
+    toggleNavigation();
+  }
+}
+
+export { toggleNavigation, outsideClickHandler };

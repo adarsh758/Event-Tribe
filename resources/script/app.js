@@ -1,6 +1,6 @@
 // Imports
 import eventsData from './vendor/event-data.js';
-import toggleNavigation from './components/primary-navigation.js';
+import { toggleNavigation, outsideClickHandler } from './components/primary-navigation.js';
 import filterByCategory from './components/filter-events.js';
 import { applyHoverEffect, scrollToEvents, showCreateEvent } from './components/interactions.js';
 import searchEvents from './components/search-events.js';
@@ -48,3 +48,4 @@ const initializeApp = () => {
 
 document.addEventListener('DOMContentLoaded', initializeApp);
 
+window.addEventListener('click', outsideClickHandler);
