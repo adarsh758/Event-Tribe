@@ -18,7 +18,7 @@ const currentEvents = [...eventsData];
 /**
  * Attach click event listeners to filter tags
  */
-const initializeFilterTags = () => {
+function initializeFilterTags() {
   filterTagElements.forEach((element) => {
     element.addEventListener('click', (event) => {
       const { category } = event.target.dataset;
@@ -28,7 +28,7 @@ const initializeFilterTags = () => {
 };
 
 // Attaches click event listeners to all menu buttons to toggle the navigation visibility
-const initializeMenuToggle = () => {
+function initializeMenuToggle() {
   const menuBtnElement = document.querySelectorAll('.header__menu-btn');
   menuBtnElement.forEach((element) => {
     element.addEventListener('click', toggleNavigation);
@@ -36,7 +36,7 @@ const initializeMenuToggle = () => {
 };
 
 // Initialize app
-const initializeApp = () => {
+function initializeApp() {
   initializeMenuToggle();
   renderEvents(currentEvents);
   initializeFilterTags();

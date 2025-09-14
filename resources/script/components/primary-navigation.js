@@ -1,3 +1,5 @@
+const navElement = document.getElementById('primary-navigation');
+
 /**
  * Updates the `aria-expanded` attribute on all menu toggle buttons
  * @param {boolean} isExpanded - Whether the menu is expanded (true) or collapsed (false)
@@ -12,12 +14,12 @@ function setAriaExpandedOnMenuButtons(isExpanded) {
 
 /**
  * Sets the `data-nav-visibility` attribute and toggles the active class on the navigation element
- * @param {HTMLElement} navElement - The navigation element to update
+ *
  * @param {boolean} isVisible - Whether the navigation is visible (true) or hidden (false)
  */
-function updateNavigationVisibility(element, isVisible) {
-  element.setAttribute('data-nav-visibility', isVisible);
-  element.classList.toggle('header__nav--active');
+function updateNavigationVisibility(isVisible) {
+  navElement.setAttribute('data-nav-visibility', isVisible);
+  navElement.classList.toggle('header__nav--active');
 }
 
 /**
@@ -25,27 +27,25 @@ function updateNavigationVisibility(element, isVisible) {
  *
  * Enables or disables page scroll by modifying `body`'s `overflow-y` style
  */
-const toggleNavigation = () => {
-  const navElement = document.getElementById('primary-navigation');
+function toggleNavigation() {
   const navVisibility = navElement.getAttribute('data-nav-visibility');
 
   if (navVisibility === 'true') {
     setAriaExpandedOnMenuButtons(false);
-    updateNavigationVisibility(navElement, false);
+    updateNavigationVisibility(false);
     document.body.style.removeProperty('overflow-y');
   } else {
     setAriaExpandedOnMenuButtons(true);
-    updateNavigationVisibility(navElement, true);
+    updateNavigationVisibility(true);
     document.body.style.overflowY = 'hidden';
   }
-};
+}
 
 /**
  * Handles clicks outside the navigation menu and closes it if open.
  * @param {MouseEvent} event - The click event
  */
 function outsideClickHandler(event) {
-  const navElement = document.querySelector('.header__nav');
   const isMenuBtn = event.target.closest('.header__menu-btn');
   const isInsideNav = event.target.closest('.header__nav');
 
