@@ -1,6 +1,6 @@
 // Imports
 import eventsData from './vendor/event-data.js';
-import initializeHeader from './components/header.js';
+import toggleNavigation from './components/primary-navigation.js';
 import filterByCategory from './components/filter-events.js';
 import { applyHoverEffect, scrollToEvents, showCreateEvent } from './components/interactions.js';
 import searchEvents from './components/search-events.js';
@@ -27,9 +27,17 @@ const initializeFilterTags = () => {
   });
 };
 
+// Attaches click event listeners to all menu buttons to toggle the navigation visibility
+const initializeMenuToggle = () => {
+  const menuBtnElement = document.querySelectorAll('.header__menu-btn');
+  menuBtnElement.forEach((element) => {
+    element.addEventListener('click', toggleNavigation);
+  });
+};
+
 // Initialize app
 const initializeApp = () => {
-  document.addEventListener('scroll', initializeHeader);
+  initializeMenuToggle();
   renderEvents(currentEvents);
   initializeFilterTags();
   document.addEventListener('mousemove', applyHoverEffect);
@@ -39,3 +47,4 @@ const initializeApp = () => {
 };
 
 document.addEventListener('DOMContentLoaded', initializeApp);
+
