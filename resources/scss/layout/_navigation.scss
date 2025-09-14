@@ -26,6 +26,18 @@
       height: 2.5em;
       transform: translateY(0.18rem); /* For Centering the SVG */
     }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: static;
+    height: auto;
+    width: auto;
+    transform: translateX(0%);
+    background: none;
   }
 }
 
@@ -38,7 +50,9 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   a {
@@ -47,6 +61,10 @@
     transition: all 0.3s ease;
     position: relative;
     font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 
   a::after {
@@ -65,7 +83,6 @@
   }
 }
 
-
 .header__nav-social {
   position: absolute;
   bottom: 0;
@@ -77,5 +94,9 @@
   svg {
     width: 2em;
     height: 2em;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
